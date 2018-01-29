@@ -1,9 +1,0 @@
-com\test\config\ObjectifyConfig.class
-com\test\dao\LibroDAO.class
-com\test\data\TestBean.class
-com\test\dao\TestBeanDAO.class
-com\test\data\Libro.class
-com\test\rest\TestResource.class
-com\test\rest\CustomJacksonJsonProvider$1.class
-com\test\rest\CustomJacksonJsonProvider.class
-com\test\rest\RecursoLibro.class

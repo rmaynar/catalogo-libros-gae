@@ -1,0 +1,13 @@
+<h3>List of tests</h3>
+<div ng-repeat="libro in listadoNombreLibros">
+    <a href="/#/{{libro.id}}">{{libro.nombre}}</a>
+</div>
+
+<h3>Catálogo de libros</h3>
+<div>
+    <div>
+        <label for="nombre">nombre</label>
+        <input id="nombre" ng-model="formulario.nombre"/>
+    </div>
+    <button ng-click="guardar()">Guardar</button>
+</div>

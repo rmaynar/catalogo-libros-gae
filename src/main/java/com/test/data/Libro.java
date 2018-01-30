@@ -5,6 +5,7 @@ import java.util.Date;
 import com.googlecode.objectify.annotation.Cache;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Index;
 import com.wordnik.swagger.annotations.ApiModel;
 
 /**
@@ -19,9 +20,9 @@ public class Libro {
 
     @Id
     private Long id;
-
+    @Index
     private String nombre;
-    
+    @Index
     private String autor;
     
     private Date fechaPublicacion;

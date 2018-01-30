@@ -1,16 +1,16 @@
 'use strict';
 angular
-    .module('test', ['ngRoute'])
+    .module('app', ['ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'views/list.html',
-                controller: 'ListCtrl',
-                controllerAs: 'list'
+                templateUrl: 'views/listado.html',
+                controller: 'libreriaCtrl',
+                controllerAs: 'libreria'
             })
             .when('/:id', {
-                templateUrl: 'views/detail.html',
-                controller: 'DetailCtrl',
+                templateUrl: 'views/detalle.html',
+                controller: 'detalleCtrl',
                 controllerAs: 'detail'
             })
             .otherwise({

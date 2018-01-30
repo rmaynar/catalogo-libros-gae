@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="appLibreria">
+<html lang="es" ng-app="app">
 <head>
-    <meta charset="UTF-8">
-    <title>Librería</title>
-    <script src="https://code.angularjs.org/1.4.7/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script>
-    <script src="appLibreria.js"></script>
-    <script src="controllers/libreriaCtrl.js"></script>
-    <script src="services/libreriaService.js"></script>
+<meta charset="UTF-8">
+<title>Librería</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+	<script src="https://code.angularjs.org/1.4.7/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+	<script src="controllers/listado.js"></script>
+	<script src="controllers/detalle.js"></script>
+	<script src="services/libreriaService.js"></script>
 </head>
 <body>
-<div ng-view></div>
+	<div ng-view></div>
 </body>
 </html>

@@ -1,0 +1,70 @@
+
+<div class="container">
+	<div class="row">
+		<form>
+			<label for="gender">Buscar</label> <input type="search"
+				ng-model="text" />
+			<button class="button-primary" ng-click="buscar()">Buscar</button>
+			<button ng-click="clear()">Limpiar</button>
+		</form>
+		<div class="col-md-9">
+			<table class="table table-list-search">
+
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Autor</th>
+						<th>Operaci&oacuten</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="libro in listadoNombreLibros | orderBy:'autor'">
+						<td><a href="/#/{{libro.id}}">{{libro.nombre}}</a></td>
+						<td>{{libro.autor}}</td>
+						<td><button ng-click="eliminar(libro.id)">Eliminar</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<h4>Nuevo libro</h4>
+	</div>
+	<div class="row">
+		<form name="libros">
+			<div class="form-group row">
+				<label for="nombre" class="col-sm-4 col-form-label">Nombre *</label> 
+				<div class="col-sm-6">
+					<input type="text" id="nombre"
+						ng-model="formulario.nombre" required />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="autor" class="col-sm-4 col-form-label">Autor *</label> 
+				<div class="col-sm-6">
+					<input type="text" id="autor"
+					ng-model="formulario.autor" required />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="fechaPublicacion" class="col-sm-4 col-form-label">Fecha de publicaci&oacuten *</label> 
+				<div class="col-sm-6">
+					<input
+					type="date" id="fechaPublicacion"
+					ng-model="formulario.fechaPublicacion" required />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="genero" class="col-sm-4 col-form-label">G&eacutenero *</label> 
+				<div class="col-sm-6">
+					<input type="text"
+					id="genero" ng-model="formulario.genero" required />
+				</div>
+			</div>
+			<button class="button-primary" ng-click="libros.$valid && guardar()">Guardar</button>
+		</form>
+	</div>
+</div>
+

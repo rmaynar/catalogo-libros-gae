@@ -18,7 +18,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="libro in listadoNombreLibros | orderBy:'autor'">
+					<tr ng-repeat="libro in listadoNombreLibros">
 						<td><a href="/#/{{libro.id}}">{{libro.nombre}}</a></td>
 						<td>{{libro.autor}}</td>
 						<td><button ng-click="eliminar(libro.id)">Eliminar</button></td>

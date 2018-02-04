@@ -26,11 +26,11 @@ public class LibroDAO {
 	}
 
 	/**
-     * @return lista de objetos libro
+     * @return lista de objetos libro ordenada por autor
      */
     public List<Libro> list() {
         LOGGER.info("Obteniendo lista de libros");
-        return ObjectifyService.ofy().load().type(Libro.class).list();
+        return ObjectifyService.ofy().load().type(Libro.class).order("autor").list();
     }
 
     /**

@@ -15,7 +15,7 @@
         <local.port>8080</local.port>
 
         <!-- Common configuration -->
-        <appengine.target.version>1.9.26</appengine.target.version>
+        <appengine.target.version>1.9.60</appengine.target.version>
         <appengine.pipeline.version>[0.2.7,0.2.9]</appengine.pipeline.version>
         <appengine.app.version>1</appengine.app.version>
         <swagger.rest.package>com.test.rest</swagger.rest.package>
@@ -29,8 +29,9 @@
         <mockito.version>1.9.0</mockito.version>
 
         <!-- Compiler configuration -->
-        <java.source>1.7</java.source>
-        <java.target>1.7</java.target>
+        <java.source>1.8</java.source>
+        <java.target>1.8</java.target>
+        <java.version>1.8</java.version>
 
         <!-- Plugins versions -->
         <maven.minimum.version>3.1.0</maven.minimum.version>
@@ -233,11 +234,11 @@
             </plugin>
 
 <!-- Plugin para desplegar en cloud -->
-<!--             <plugin> -->
-<!-- 			    <groupId>com.google.cloud.tools</groupId> -->
-<!-- 				<artifactId>appengine-maven-plugin</artifactId> -->
-<!-- 				<version>1.3.1</version> -->
-<!-- 			</plugin> -->
+            <plugin>
+			    <groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>1.3.1</version>
+			</plugin>
         </plugins>
     </build>
 </project>

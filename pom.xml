@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.test</groupId>
-    <artifactId>test-gae</artifactId>
+    <artifactId>rms-catalogo-libros</artifactId>
     <version>task-example</version>
     <packaging>war</packaging>
 
-    <name>test-gae</name>
+    <name>rms-catalogo-libros</name>
 
     <properties>
         <local.port>8080</local.port>
@@ -234,11 +234,11 @@
             </plugin>
 
 <!-- Plugin para desplegar en cloud -->
-<!--             <plugin> -->
-<!-- 			    <groupId>com.google.cloud.tools</groupId> -->
-<!-- 				<artifactId>appengine-maven-plugin</artifactId> -->
-<!-- 				<version>1.3.1</version> -->
-<!-- 			</plugin> -->
+            <plugin>
+			    <groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>1.3.2</version>
+			</plugin>
         </plugins>
     </build>
 </project>

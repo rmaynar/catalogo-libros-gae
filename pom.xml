@@ -106,6 +106,73 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+			<id>debug</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.google.appengine</groupId>
+						<artifactId>appengine-maven-plugin</artifactId>
+						<version>${appengine.target.version}</version>
+						<configuration>
+							<jvmFlags>
+								<jvmFlag>-Xdebug</jvmFlag>
+								<jvmFlag>
+									-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=y
+								</jvmFlag>
+								<jvmFlag>
+									-Ddatastore.backing_store=${project.basedir}/local_db.bin
+								</jvmFlag>
+								<jvmFlag>
+									-DLocalSearchService.useDirectory=${project.basedir}
+								</jvmFlag>
+								<jvmFlag>-XX:MaxPermSize=512m</jvmFlag>
+							</jvmFlags>
+							<disableUpdateCheck>true</disableUpdateCheck>
+							<fullScanSeconds>2</fullScanSeconds>
+						</configuration>
+					</plugin>
+					<plugin>
+                        <groupId>com.github.kongchen</groupId>
+                        <artifactId>swagger-maven-plugin</artifactId>
+                        <version>${swagger.plugin.version}</version>
+                        <configuration>
+                            <apiSources>
+                                <apiSource>
+                                    <locations>${swagger.rest.package}</locations>
+                                    <apiVersion>v1</apiVersion>
+                                    <basePath>
+                                        http://localhost:${local.port}/${swagger.rest.uri}
+                                    </basePath>
+                                    <outputTemplate>markdown.mustache</outputTemplate>
+                                    <outputPath>
+                                        ${project.build.directory}/swaggerDoc/strapdown.html
+                                    </outputPath>
+                                    <swaggerDirectory>
+                                        ${project.build.directory}/${project.artifactId}-${project.version}/swaggerDoc/apidocs
+                                    </swaggerDirectory>
+                                    <swaggerUIDocBasePath>
+                                        http://localhost:${local.port}/swaggerDoc/apidocs
+                                    </swaggerUIDocBasePath>
+                                </apiSource>
+                            </apiSources>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>Generate SWAGGER documentation</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>generate</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+				</plugins>
+			</build>
+		</profile>
     </profiles>
 
     <dependencies>

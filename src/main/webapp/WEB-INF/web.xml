@@ -26,6 +26,10 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  <servlet>
+  	<servlet-name>HolaServlet</servlet-name>
+  	<servlet-class>com.test.servlet.HolaServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>jersey</servlet-name>
     <url-pattern>/rest/*</url-pattern>

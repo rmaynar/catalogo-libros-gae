@@ -11,7 +11,7 @@ Useful information
 
 5. Access Google console: https://console.developers.google.com
 
-6. Deploy in Google: mvn clean appengine:deploy
+6. Deploy in Google: mvn clean appengine:deploy | mvn appengine:update
 
 
 Documentation

@@ -6,3 +6,13 @@
 # Maven: Archivos compilados
 target/
 **/target/
+.factorypath
+.idea/compiler.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/workspace.xml
+indexes/cm1zLWNhdGFsb2dvLWxpYnJvcw/TGlicm8..P/_0.cfs
+indexes/cm1zLWNhdGFsb2dvLWxpYnJvcw/TGlicm8..P/_1.cfs
+indexes/cm1zLWNhdGFsb2dvLWxpYnJvcw/TGlicm8..P/segments.gen
+indexes/cm1zLWNhdGFsb2dvLWxpYnJvcw/TGlicm8..P/segments_3
+indexes/cm1zLWNhdGFsb2dvLWxpYnJvcw/TGlicm8..P/write.lock
